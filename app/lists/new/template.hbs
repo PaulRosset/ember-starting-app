@@ -1,0 +1,26 @@
+{{page-title 'New'}}
+{{outlet}}
+
+<h1>Hello World</h1>
+
+<form onsubmit={{this.onSubmitTodo}}>
+  <div>
+    <label for='title'>Title</label>
+    <input
+      type='text'
+      {{on 'change' this.onChangeTodoTitle}}
+      value={{@model.title}}
+      id='title'
+    />
+  </div>
+  <div>
+    <label for='completed'>Completed?</label>
+    <input
+      type='checkbox'
+      {{on 'change' this.onChangeTodoCompleted}}
+      checked={{@model.completed}}
+      id='completed'
+    />
+  </div>
+  <button type='submit'>Submit</button>
+</form>

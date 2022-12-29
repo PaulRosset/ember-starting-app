@@ -1,0 +1,11 @@
+{{page-title 'Lists'}}
+{{outlet}}
+
+<ul>
+  {{#each this.model as |todo|}}
+    <li>
+      <input id='completion' type='checkbox' checked={{todo.completed}} />
+      <label for='completion'>{{todo.title}}</label>
+    </li>
+  {{/each}}
+</ul>
